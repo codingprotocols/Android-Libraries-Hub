@@ -8,12 +8,13 @@ import com.codingprotocols.androidlibrarieshub.fragment.BookmarkFragment
 import com.codingprotocols.androidlibrarieshub.fragment.HomeFragment
 import com.codingprotocols.androidlibrarieshub.fragment.SearchFragment
 
+// Created by Ajeet Yadav
+
 class ViewPagerAdapter(
-    private val fragmentList: ArrayList<Fragment>,
     fm: FragmentManager
 ) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-    override fun getCount(): Int = fragmentList.size
+    override fun getCount(): Int = 4
 
     override fun getItem(position: Int): Fragment {
         when (position) {
