@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity() {
         val bubbleNavigationLinearView =
             findViewById<BubbleNavigationLinearView>(R.id.bottom_navigation_view_linear)
 
-        bubbleNavigationLinearView.setBadgeValue(0, "40")
+        bubbleNavigationLinearView.setBadgeValue(0, null)
         bubbleNavigationLinearView.setBadgeValue(1, null) //invisible badge
 
-        bubbleNavigationLinearView.setBadgeValue(2, "7")
-        bubbleNavigationLinearView.setBadgeValue(3, "2")
+        bubbleNavigationLinearView.setBadgeValue(2, "0")
+        bubbleNavigationLinearView.setBadgeValue(3, null) //invisible badge
 
 
         val viewPager = findViewById<ViewPager>(R.id.view_pager)
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageScrollStateChanged(i: Int) {}
         })
+
 
         bubbleNavigationLinearView.setNavigationChangeListener { _, position ->
             viewPager.setCurrentItem(
